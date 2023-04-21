@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table class="table table-sm" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th><th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for partner in partners %}
+                    <tr>
+                        <td>{{ partner.name }}</td>
+                        <td>{{ partner.phone }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/print" class="btn btn-primary" target="_blank">Imprimer</a>
+    </div>
+</body>
+</html>
